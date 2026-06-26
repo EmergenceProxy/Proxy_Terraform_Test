@@ -7,7 +7,7 @@ resource "aws_instance" "ytcdl-VM"{
 	ami = "ami-060988b0dff2faa7c"
 	instance_type = "t3.micro"
 	key_name = "ProxyRustyServer_KeyPair_2"
-	security_groups = ["sg-068ce2334ae207a39"]
+	vpc_security_group_ids = ["sg-068ce2334ae207a39"]
 	tags = {
 		Name = "proxy_ytcdl_vm"
 	}
