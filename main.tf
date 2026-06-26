@@ -2,7 +2,7 @@ provider "aws" {
 	region = "us-east-2"
 }
 
-resources "aws_instance" "ytcdl-VM"{
+resource "aws_instance" "ytcdl-VM"{
 	count = 1
 	ami = "i-0506008b7824b0527"
 	instance_type = "t3.micro"
@@ -13,7 +13,7 @@ resources "aws_instance" "ytcdl-VM"{
 	}
 }
 
-resources "aws_instance" "rusty-VM"{
+resource "aws_instance" "rusty-VM"{
 	count = 0
 	ami = "i-0506008b7824b0527"
 	instance_type = "t3.micro"
