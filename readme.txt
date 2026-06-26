@@ -1,10 +1,8 @@
 # 🚀 Proxy_Terraform_Test
 
 
-> A fast way to setup aws infrastucture using terraform containers, running on docker, installed on an AWS EC2.
+A fast way to setup aws infrastucture using terraform containers, running on docker, installed on an AWS EC2.
 
-[![License](https://shields.io)](LICENSE)
-[![Build Status](https://shields.io)]()
 
 ---
 
@@ -23,9 +21,11 @@
 3. Create EC2.
 4. Assign role to EC2.
 5. Log into EC2.
-6. Install Docker.
-7. Modify "main.tf"
-8. =D !!!
+6. Install git. 
+7. Clone repo. 
+8. Install Docker.
+9. Modify "Proxy_Terraform_Test/main.tf"
+10. =D !!!
 
 ## Usage
 
@@ -37,3 +37,5 @@
 			-v $(pwd):/workspace \
 			-w /workspace \
 			hashicorp/terraform:latest apply "tfplan1"
+			
+4. docker run --rm -v $(pwd):/workspace -w /workspace hashicorp/terraform:latest destroy -auto-approve
